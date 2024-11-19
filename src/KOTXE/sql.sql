@@ -17,11 +17,15 @@ CREATE TABLE kotxeak (
     FOREIGN KEY (jabea_id) REFERENCES jabeak(id) ON DELETE SET NULL
 );
 
--- Insertar datos
-INSERT INTO jabeak (DNI, izena) VALUES 
-('12345678A', 'Jon'),
-('23456789B', 'Amaia');
 
-INSERT INTO kotxeak (matrikula, matrikulazio_data, itv) VALUES 
-('ABC1234', '2022-01-10', true),
-('DEF5678', '2023-06-15', false);
+INSERT INTO jabeak (DNI, izena) 
+VALUES 
+('12345678A', 'Juan Pérez'),
+('98765432B', 'Ana López'),
+('11223344C', 'Luis Gómez');
+
+INSERT INTO kotxeak (jabea_id, matrikula, matrikulazio_data, itv) 
+VALUES 
+(1, '1234ABC', '2023-05-12', TRUE),
+(2, '5678XYZ', '2022-08-22', FALSE),
+(3, '9876DEF', '2024-01-15', TRUE);
